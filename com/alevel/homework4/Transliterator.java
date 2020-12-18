@@ -11,20 +11,14 @@ public class Transliterator {
         System.out.print("Please, entered cyrillic text ");
         text = scanner.nextLine();
         char[] cyrillic = text.toCharArray();
-        //char[][] latinText;
-        String []latinText = transliterator(cyrillic);
-        for (int i=0; i<30;i++){
+        String[] latinText = transliterator(cyrillic);
+        for (int i = 0; i < 30; i++) {
             System.out.print(latinText[i]);
         }
+    }
 
-
-
-}
-
-    public static String [] transliterator(char[] letters) {
-
-        String[] latin =new String[30];
-
+    public static String[] transliterator(char[] letters) {
+        String[] latin = new String[30];
         for (int i = 0; i < 30; i++) {
             switch (letters[i]) {
                 case 'а':
@@ -37,10 +31,10 @@ public class Transliterator {
                     latin[i] = "v";
                     break;
                 case 'д':
-                    latin[i]= "d";
+                    latin[i] = "d";
                     break;
                 case 'е':
-                    latin[i]= "e";
+                    latin[i] = "e";
                 case 'ё':
                     latin[i] = "yo";
                     break;
@@ -109,42 +103,39 @@ public class Transliterator {
                     latin[i] = "'";
                     break;
                 case 'ы':
-                    latin[i]= "y";
+                    latin[i] = "y";
                     break;
                 case 'ь':
-                    latin[i]= "'";
+                    latin[i] = "'";
                     break;
                 case 'э':
                     latin[i] = "e";
                     break;
                 case 'ю':
-                    latin[i]= "yu";
+                    latin[i] = "yu";
                     break;
                 case 'я':
-                    latin[i]="ya";
+                    latin[i] = "ya";
                     break;
                 case ' ':
-                    latin[i]=" ";
+                    latin[i] = " ";
                     break;
                 case ',':
-                    latin[i]=",";
+                    latin[i] = ",";
                     break;
                 case '.':
-                    latin[i]=".";
+                    latin[i] = ".";
                     break;
                 case '?':
-                    latin[i]="?";
+                    latin[i] = "?";
                     break;
                 case '!':
-                    latin[i]="!";
+                    latin[i] = "!";
                     break;
                 case ':':
-                    latin[i]=":";
+                    latin[i] = ":";
                     break;
-
             }
-
-
         }
         return latin;
     }

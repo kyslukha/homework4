@@ -2,9 +2,8 @@ package com.alevel.homework4;
 
 import java.util.Scanner;
 
-public class decreaseOrIncrease {
+public class DecreaseOrIncrease {
     public static void main(String[] args) {
-
         int[] array = new int[10];
         int[] result = new int[10];
         Scanner scanner = new Scanner(System.in);
@@ -20,7 +19,6 @@ public class decreaseOrIncrease {
             case "a": {
                 result = ascending(array);
                 System.out.println("Ascending is ");
-
                 break;
             }
             case "d": {
@@ -29,11 +27,9 @@ public class decreaseOrIncrease {
                 break;
             }
         }
-
-            for (int i = 0; i < 10; i++) {
-                System.out.print("  " + result[i]);
-            }
-
+        for (int i = 0; i < 10; i++) {
+            System.out.print("  " + result[i]);
+        }
     }
 
     public static int[] ascending(int[] numbers) {
@@ -61,6 +57,5 @@ public class decreaseOrIncrease {
         }
         return numbers;
     }
-
 }
 
